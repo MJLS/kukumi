@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600&display=swap');
+
+$type: 'Poppins';
+
+
+
+@mixin typebase ( $size: 16px,$lineh: 0,$letters: 0 ) {
+    font-family: $type;
+    font-size: $size;
+    line-height: $lineh;
+    letter-spacing: $letters;
+}
+@mixin display1 () {
+    font-family: $type;
+    font-size: 5em;
+    line-height: 88px;
+    letter-spacing: 0;
+}
+@mixin display2(){
+    font-family: $type;
+    font-size: 3em;
+    line-height: 56px;
+    letter-spacing: 0;
+}
+@mixin display3(){
+    font-family: $type;
+    font-size: 2.5em;
+    line-height: 48px;
+    letter-spacing: 0;
+}
+@mixin display4(){
+    font-family: $type;
+}
+@mixin h1(){
+    font-family: $type;
+    font-size: 2em;
+    line-height: 40px;
+    letter-spacing: 0;
+}
+@mixin h2(){
+    font-family: $type;
+}
+@mixin h2Thin(){
+    font-family: $type;
+}
+@mixin h3(){
+    font-family: $type;
+}
+@mixin h3Thin(){
+    font-family: $type;
+    font-size: 1.25em;
+    font-weight: 100;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+@mixin body1(){
+    font-family: $type;
+}
+@mixin body2(){
+    font-family: $type;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0;
+}
+@mixin label1(){
+    font-family: $type;
+}
+@mixin label2(){
+    font-family: $type;
+    font-size: .75em;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0;
+}
+@mixin label3Thin() {
+    font-family: $type;
+    font-size: .75em;
+    font-weight: 200;
+    line-height: 12px;
+    letter-spacing: 0;
+}
+@mixin label3Bold(){
+    font-family: $type;
+}

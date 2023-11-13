@@ -90,15 +90,28 @@ a {
   background-color: black;
 }
 
-#title__section {
-  margin: 20px 10px;
+#title__section, #title__section--line {
+  margin: 20px 0;
 }
-#title__section h3 {
+#title__section h3, #title__section--line h3 {
   font-family: "Poppins";
   font-size: 1.25em;
   font-weight: 100;
   line-height: 28px;
   letter-spacing: 0;
+}
+
+#title__section--line {
+  display: inline-block;
+}
+#title__section--line h3 {
+  margin-top: 20px;
+  padding: 10px 50px 10px 50px;
+  background: rgb(209, 209, 209);
+  color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 0;
 }
 
 #shop {
@@ -301,6 +314,43 @@ a {
   letter-spacing: 0;
   border: 1px solid black;
   border-radius: 50%;
+}
+
+#stories {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+#stories .story__card {
+  margin: 10px;
+  text-align: right;
+}
+#stories .story__card img {
+  max-width: 200px;
+  max-height: auto;
+  border-radius: 35%;
+  border-bottom-left-radius: 0;
+}
+#stories .story__card h3,
+#stories .story__card p {
+  display: block;
+  margin: 0;
+}
+#stories .story__card h3 {
+  margin: 10px 0;
+  font-family: "Poppins";
+  font-size: 0.8125em;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0;
+}
+#stories .story__card p {
+  font-family: "Poppins";
+  font-size: 0.75em;
+  font-weight: 200;
+  line-height: 12px;
+  letter-spacing: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

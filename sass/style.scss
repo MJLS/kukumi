@@ -105,11 +105,28 @@ a {
 
 // 3 - Title section
 
-#title__section {
-    margin: 20px 10px;
+#title__section, #title__section--line {
 
+    margin: 20px 0;
+    
     h3 {
         @include h3Thin();
+    }
+}
+
+#title__section--line {
+
+    display: inline-block;
+
+    h3 {
+        margin-top: 20px;
+        padding: 10px 50px 10px 50px;
+        background: $neutral-300;
+        color: $base-blanco;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: 0;
+
     }
 
 }
@@ -267,11 +284,11 @@ a {
     }
 
     .design__products {
-        
+
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        
+
         .product__card {
 
             justify-content: center;
@@ -340,6 +357,46 @@ a {
             }
 
         }
+    }
+
+}
+
+// 5 - blog
+
+#stories {
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px 0;
+
+    .story__card {
+        margin: 10px;
+        text-align: right;
+
+        img {
+
+            max-width: 200px;
+            max-height: auto;
+            border-radius: 35%;
+            border-bottom-left-radius: 0;
+        }
+
+        h3,
+        p {
+            display: block;
+            margin: 0;
+        }
+
+        h3 {
+            margin: 10px 0;
+            @include label1();
+        }
+
+        p {
+            @include label3Thin();
+        }
+
     }
 
 }

@@ -240,6 +240,7 @@ a {
   object-fit: cover;
 }
 #design .design__products {
+  background-color: color;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

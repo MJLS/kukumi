@@ -91,7 +91,7 @@ a {
 }
 
 #title__section, #title__section--line {
-  margin: 20px 0;
+  margin: 45px 0;
 }
 #title__section h3, #title__section--line h3 {
   font-family: "Poppins";
@@ -118,7 +118,12 @@ a {
   margin: 0 30px 30px 30px;
 }
 #shop .products {
-  margin: 10px 0;
+  margin: 10px 0 90px 0;
+}
+@media (max-width: 576px) {
+  #shop .products {
+    justify-content: center !important;
+  }
 }
 #shop .products .product {
   position: relative;
@@ -126,8 +131,8 @@ a {
   justify-content: center;
   width: 233px;
   height: 345px;
+  margin: 10px;
   overflow: hidden;
-  border: 1px solid grey;
 }
 #shop .products .product img {
   height: 100%;
@@ -245,7 +250,7 @@ a {
 
 #design .design__slider {
   display: flex;
-  overflow: hidden;
+  background-color: rgb(224, 224, 224);
 }
 #design .design__slider img {
   max-width: 100%;
@@ -327,7 +332,7 @@ a {
   text-align: right;
 }
 #stories .story__card img {
-  max-width: 200px;
+  max-width: 150px;
   max-height: auto;
   border-radius: 35%;
   border-bottom-left-radius: 0;
@@ -354,6 +359,7 @@ a {
 }
 
 #footer {
+  margin: 90px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -388,7 +394,7 @@ a {
 }
 #footer .footer__email p {
   width: auto;
-  margin-top: 5px;
+  margin-top: 12px;
   font-family: "Poppins";
   font-size: 0.75em;
   font-weight: 200;

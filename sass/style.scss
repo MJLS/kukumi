@@ -107,7 +107,7 @@ a {
 
 #title__section, #title__section--line {
 
-    margin: 20px 0;
+    margin: 45px 0;
     
     h3 {
         @include h3Thin();
@@ -139,21 +139,25 @@ a {
 
     .products {
 
-        margin: 10px 0;
+        margin: 10px 0 90px 0;
 
+        @media (max-width:576px)
+            {
+                justify-content: center !important;
+            }
 
         .product {
-
+            
             position: relative;
             display: flex;
             justify-content: center;
             width: 233px;
             height: 345px;
+            margin: 10px;
             overflow: hidden;
-            border: 1px solid grey;
+            
 
             img {
-
                 height: 100%;
                 width: auto;
             }
@@ -217,6 +221,7 @@ a {
     background-color: $neutral-600;
 
     .trending__img {
+
         overflow: hidden;
 
         img {
@@ -273,8 +278,9 @@ a {
 #design {
 
     .design__slider {
+
         display: flex;
-        overflow: hidden;
+        background-color: $neutral-200;
 
         img {
             max-width: 100%;
@@ -376,7 +382,7 @@ a {
 
         img {
 
-            max-width: 200px;
+            max-width: 150px;
             max-height: auto;
             border-radius: 35%;
             border-bottom-left-radius: 0;
@@ -404,9 +410,12 @@ a {
 // 6 - Footer
 
 #footer {
+
+    margin: 90px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     .footer__widget {
         
         width: 150px;
@@ -430,7 +439,7 @@ a {
 
         p {
             width: auto;
-            margin-top: 5px;
+            margin-top: 12px;
             @include label3Thin();
         }
     }

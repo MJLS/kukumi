@@ -400,3 +400,38 @@ a {
     }
 
 }
+
+// 6 - Footer
+
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .footer__widget {
+        
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 5px 0;
+        padding-right: 5px;
+        h3 {
+            text-transform: uppercase;
+            @include body2();
+        }
+        a {
+            padding: 8px 0;
+            @include label3Thin();
+        }
+    }
+    .footer__email {
+        margin-top: 5px;
+        width: 400px;
+
+        p {
+            width: auto;
+            margin-top: 5px;
+            @include label3Thin();
+        }
+    }
+}

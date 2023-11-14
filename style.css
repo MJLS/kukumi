@@ -353,4 +353,47 @@ a {
   letter-spacing: 0;
 }
 
+#footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#footer .footer__widget {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 5px 0;
+  padding-right: 5px;
+}
+#footer .footer__widget h3 {
+  text-transform: uppercase;
+  font-family: "Poppins";
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+#footer .footer__widget a {
+  padding: 8px 0;
+  font-family: "Poppins";
+  font-size: 0.75em;
+  font-weight: 200;
+  line-height: 12px;
+  letter-spacing: 0;
+}
+#footer .footer__email {
+  margin-top: 5px;
+  width: 400px;
+}
+#footer .footer__email p {
+  width: auto;
+  margin-top: 5px;
+  font-family: "Poppins";
+  font-size: 0.75em;
+  font-weight: 200;
+  line-height: 12px;
+  letter-spacing: 0;
+}
+
 /*# sourceMappingURL=style.css.map */

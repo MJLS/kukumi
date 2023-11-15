@@ -9,6 +9,10 @@ a {
   color: black;
 }
 
+#header {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
 #header #brand {
   min-width: 145px;
   display: flex;

@@ -21,7 +21,6 @@ a {
 #header #brand .brand__title {
   display: block;
   width: auto;
-  font: 32px;
 }
 #header .menu__item {
   font-family: "Poppins";
@@ -57,13 +56,11 @@ a {
   height: auto;
 }
 #b1hero div {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
   position: absolute;
   top: 20%;
-  left: 5%;
+  left: 10%;
+  display: flex;
+  flex-wrap: wrap;
 }
 #b1hero div h1 {
   display: block;
@@ -73,12 +70,14 @@ a {
   letter-spacing: 0;
 }
 #b1hero div h1,
-#b1hero div img,
 #b1hero div a,
 #b1hero div span {
   margin-bottom: 30px;
 }
 #b1hero div .info__txt {
+  display: block;
+  width: 100%;
+  padding-right: 10px;
   font-family: "Poppins";
   font-size: 3em;
   line-height: 56px;
@@ -95,6 +94,49 @@ a {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   background-color: black;
+}
+@media (max-width: 576px) {
+  #b1hero div h1 {
+    font-family: "Poppins";
+    font-size: 1.5em;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+  #b1hero div .info__txt {
+    font-family: "Poppins";
+    font-size: 2em;
+    line-height: 40px;
+    letter-spacing: 0;
+  }
+}
+@media (max-width: 425px) {
+  #b1hero div {
+    top: 5%;
+  }
+  #b1hero div h1,
+  #b1hero div span {
+    margin-bottom: 15px !important;
+  }
+  #b1hero div h1 {
+    font-family: "Poppins";
+    font-size: 1.25em;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+  #b1hero div .info__txt {
+    font-family: "Poppins";
+    font-size: 1.5em;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+  #b1hero div .info__cta {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 576px) {
+  #b1hero {
+    height: 50%;
+  }
 }
 
 #title__section, #title__section--line {
@@ -389,8 +431,9 @@ a {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 5px 0;
-  padding-right: 5px;
+  margin: 5px 20px 0;
+  padding-left: 15px;
+  border-left: 0.3px solid black;
 }
 #footer .footer__widget h3 {
   text-transform: uppercase;

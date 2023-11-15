@@ -9,19 +9,26 @@ a {
   color: black;
 }
 
-#brand {
+#header #brand {
   min-width: 145px;
   display: flex;
   align-items: center;
 }
-#brand .brand__logo {
+#header #brand .brand__logo {
   max-width: 64px;
   height: auto;
 }
-#brand .brand__title {
+#header #brand .brand__title {
   display: block;
   width: auto;
   font: 32px;
+}
+#header .menu__item {
+  font-family: "Poppins";
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0;
 }
 
 #usermenu {
@@ -134,9 +141,22 @@ a {
   margin: 10px;
   overflow: hidden;
 }
+@media (max-width: 576px) {
+  #shop .products .product {
+    width: 100%;
+    padding: 0;
+  }
+}
 #shop .products .product img {
   height: 100%;
   width: auto;
+}
+@media (max-width: 576px) {
+  #shop .products .product img {
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 #shop .products .product .item__head,
 #shop .products .product .price {

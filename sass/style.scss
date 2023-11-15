@@ -13,23 +13,29 @@ a {
 
 // 1 - HEAD 
 
-#brand {
-    min-width: 145px;
-    display: flex;
-    align-items: center;
-
-    .brand__logo {
-        max-width: 64px;
-        height: auto;
+#header {
+    #brand {
+        min-width: 145px;
+        display: flex;
+        align-items: center;
+    
+        .brand__logo {
+            max-width: 64px;
+            height: auto;
+        }
+    
+        .brand__title {
+            display: block;
+            width: auto;
+            font: 32px;
+        }
+    
     }
-
-    .brand__title {
-        display: block;
-        width: auto;
-        font: 32px;
+    .menu__item {
+        @include body2();
     }
-
 }
+
 
 #usermenu {
 
@@ -156,10 +162,20 @@ a {
             margin: 10px;
             overflow: hidden;
             
+            @media (max-width:576px) {
+                width: 100%;
+                padding: 0;
+            }
 
             img {
                 height: 100%;
                 width: auto;
+
+                @media (max-width:576px){
+                    max-height: 100%;
+            width: 100%;
+            object-fit: cover;
+                }
             }
 
             .item__head,

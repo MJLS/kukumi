@@ -1,5 +1,6 @@
-@import 'color.scss';
-@import 'type.scss';
+@import 'custom_bootstrap';
+@import 'color';
+@import 'type';
 
 img {
     filter: saturate(0);
@@ -14,7 +15,7 @@ a {
 // 1 - HEAD 
 
 #header {
-    
+
     background-color: rgba($color: $base-blanco, $alpha: .5);
     backdrop-filter: blur(10px);
 
@@ -22,18 +23,19 @@ a {
         min-width: 145px;
         display: flex;
         align-items: center;
-    
+
         .brand__logo {
             max-width: 64px;
             height: auto;
         }
-    
+
         .brand__title {
             display: block;
             width: auto;
         }
-    
+
     }
+
     .menu__item {
         @include body2();
     }
@@ -44,21 +46,148 @@ a {
 
     width: 100px;
 
-    .usermenu__user,
-    .usermenu__cart {
+    svg {
+        color:$base-negro;
+    }
+    // .usermenu__user,
+    // .usermenu__cart {
 
-        width: 20px;
+    //     width: 20px;
 
-        @media (max-width: 992px) {
-            width: 24px;
-            margin-left: 20px;
+    //     @media (max-width: 992px) {
+    //         width: 24px;
+    //         margin-left: 20px;
+    //     }
+
+    // }
+}
+
+// 2 - Hero Flickity slider
+
+.main-carousel {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+
+    @media (max-width:576px) {
+        height: 300px;
+    }
+    
+    .carousel-cell,
+    .carousel-cell--main {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+    }
+
+    .carousel-cell {
+        width: 50%;
+        height: 600px;
+    }
+
+    .carousel-cell--main {
+
+        width: 100%;
+
+        div {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            display: flex;
+            flex-wrap: wrap;
+
+            h1 {
+                display: block;
+                @include h1();
+            }
+
+            h1,
+            a,
+            span {
+                margin-bottom: 30px;
+            }
+
+            .info__txt {
+                display: block;
+                width: 100%;
+                padding-right: 10px;
+                @include display2();
+            }
+
+            .info__cta {
+                width: 250px;
+                padding: 12px 24px;
+                text-align: center;
+                color: $base-blanco;
+                border-radius: 8px;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                -ms-border-radius: 8px;
+                -o-border-radius: 8px;
+                background-color: $base-negro;
+            }
+
+            @media (max-width:576px) {
+
+                h1 {
+                    @include h2();
+                }
+
+                .info__txt {
+                    @include display4();
+                }
+            }
+
+            @media (max-width:425px) {
+                
+                top: 5%;
+
+                h1,
+                span {
+                    margin-bottom: 15px !important;
+                }
+                h1 {
+                    @include h3();
+                }
+
+                .info__txt {
+                    @include h2();
+                }
+
+                .info__cta {
+                    margin-bottom: 0;
+                    padding: 6px ;
+                }
+            }
         }
 
     }
+
+    // custom Flickity 
+    // arrows
+    .flickity-button {
+        display: none;
+    }
+    // dots
+    .flickity-page-dots {
+        bottom: 10px;
+    }
+    .flickity-page-dots .dot {
+        height: 2px;
+        width: 40px;
+        margin: 0 5px;
+        border-radius: 0;
+        background:$base-blanco;
+    }
+
 }
 
-// 2 - BLOQUE 1 -- HERO
 
+/*
 #b1hero {
 
     position:relative;
@@ -142,13 +271,15 @@ a {
 
     
 }
+*/
 
 // 3 - Title section
 
-#title__section, #title__section--line {
+#title__section,
+#title__section--line {
 
     margin: 45px 0;
-    
+
     h3 {
         @include h3Thin();
     }
@@ -181,13 +312,12 @@ a {
 
         margin: 10px 0 90px 0;
 
-        @media (max-width:576px)
-            {
-                justify-content: center !important;
-            }
+        @media (max-width:576px) {
+            justify-content: center !important;
+        }
 
         .product {
-            
+
             position: relative;
             display: flex;
             justify-content: center;
@@ -195,7 +325,7 @@ a {
             height: 345px;
             margin: 10px;
             overflow: hidden;
-            
+
             @media (max-width:576px) {
                 width: 100%;
                 padding: 0;
@@ -205,10 +335,10 @@ a {
                 height: 100%;
                 width: auto;
 
-                @media (max-width:576px){
+                @media (max-width:576px) {
                     max-height: 100%;
-            width: 100%;
-            object-fit: cover;
+                    width: 100%;
+                    object-fit: cover;
                 }
             }
 
@@ -467,7 +597,7 @@ a {
     justify-content: space-between;
 
     .footer__widget {
-        
+
         width: 150px;
         display: flex;
         flex-direction: column;
@@ -480,11 +610,13 @@ a {
             text-transform: uppercase;
             @include body2();
         }
+
         a {
             padding: 8px 0;
             @include label3Thin();
         }
     }
+
     .footer__email {
         margin-top: 5px;
         width: 400px;

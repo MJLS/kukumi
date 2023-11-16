@@ -1,13 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600&display=swap");
-.navbar-toggler  {
-  border: none !important;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none !important;
-}
-
 img {
   filter: saturate(0);
   -webkit-filter: saturate(0);
@@ -116,6 +108,9 @@ a {
   background-color: black;
 }
 @media (max-width: 576px) {
+  .main-carousel .carousel-cell--main div {
+    top: 5%;
+  }
   .main-carousel .carousel-cell--main div h1 {
     font-family: "Poppins";
     font-size: 1.5em;
@@ -130,9 +125,6 @@ a {
   }
 }
 @media (max-width: 425px) {
-  .main-carousel .carousel-cell--main div {
-    top: 5%;
-  }
   .main-carousel .carousel-cell--main div h1,
   .main-carousel .carousel-cell--main div span {
     margin-bottom: 15px !important;
@@ -579,6 +571,15 @@ a {
   font-weight: 200;
   line-height: 12px;
   letter-spacing: 0;
+}
+
+.navbar-toggler   {
+  border: none !important;
+  background-color: green !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */

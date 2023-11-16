@@ -51,7 +51,6 @@ a {
 
 #b1hero {
   position: relative;
-  width: 100%;
   height: 600px;
   overflow: hidden;
 }
@@ -115,7 +114,7 @@ a {
 }
 @media (max-width: 425px) {
   #b1hero div {
-    top: 5%;
+    top: 10%;
   }
   #b1hero div h1,
   #b1hero div span {

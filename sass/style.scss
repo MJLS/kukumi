@@ -521,66 +521,72 @@ D - Custom bootstrap
 
 .shop__products {
 
-    @media (max-width:425px){
-            justify-content: start !important;
+    @media (max-width:425px) {
+        justify-content: start !important;
     }
 
-    @media (max-width:320px){
+    @media (max-width:320px) {
         justify-content: center !important;
     }
+
     .shop__product {
         width: 284px;
         height: 383px;
         margin: 5px;
 
-        @media (max-width:320px){
-    
+        @media (max-width:320px) {
+
             width: 184px;
             height: 283px;
         }
-    
-        
+
+
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
         }
+
         .product__info {
 
             display: flex;
             justify-content: space-around;
-            
+
             .info__title {
                 @include label3Thin();
                 align-self: center;
             }
-            .info__price{
-                @include label3Bold(); 
+
+            .info__price {
+                @include label3Bold();
             }
         }
     }
-    
+
 }
+
 .shop__sidebar {
 
     .sidebar__filters {
-        
-        p{
+
+        p {
             margin-bottom: 10px;
             @include body1();
         }
+
         ul {
             padding: 0;
             margin: 0;
         }
-        ul > li {
+
+        ul>li {
             list-style: none;
             @include label3Thin();
             margin-bottom: 10px;
         }
     }
-    
+
 
 }
 
@@ -594,48 +600,109 @@ D - Custom bootstrap
     margin: 90px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 
-    .footer__widget {
+    .footer__xl {
 
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin: 5px 20px 0;
-        padding-left: 15px;
-        border-left: .3px solid $base-negro;
+        .footer__widget {
 
-        h3 {
-            text-transform: uppercase;
-            @include body2();
+            width: 150px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 5px 12px 0 !important;
+            padding-left: 15px;
+            border-left: .3px solid $base-negro;
+
+            h3 {
+                text-transform: uppercase;
+                @include body2Bold();
+            }
+
+            a {
+                padding: 8px 0;
+                @include label3Thin();
+            }
         }
 
-        a {
-            padding: 8px 0;
-            @include label3Thin();
-        }
-    }
+        .footer__email {
+            margin-top: 5px;
+            width: 400px;
 
-    .footer__email {
-        margin-top: 5px;
-        width: 400px;
-
-        p {
-            width: auto;
-            margin-top: 12px;
-            @include label3Thin();
+            p {
+                width: auto;
+                margin-top: 12px;
+                @include label3Thin();
+            }
         }
     }
 }
+
+
+
 
 /* D - Custom bootstrap */
 // ERROR: NO resulta la customización de boostrap 5.0
-.navbar-toggler  {
+// 1. navbar
+.navbar-toggler {
     border: none !important;
     background-color: green !important;
 }
+
 .navbar-toggler:focus {
     box-shadow: none !important;
 }
 
+// 2. accordion
+#footer {
+
+        .accordion {
+            //NOTE: Cambia el color del icono cuando pulsamos sobre la flecha para desplegar el contenido.
+            --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            border-left: .5px $base-negro solid;
+        }
+
+        .accordion__footer__widget,
+        .accordion-button {
+            box-shadow: none !important;
+        }
+
+        .accordion__footer__widget {
+            border-left: .5px $base-negro solid;
+
+        }
+
+        .accordion-button {
+            padding-bottom: 0;
+            padding-top: 0;
+            background: none !important;
+            box-shadow: none !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            //NOTE: Al desplegarse mantiene el color que indicamos.
+            color: $base-negro !important;
+        }
+
+        .accordion-button:focus {
+            //NOTE: Al recibir el foco mantiene el color que indicamos
+            border-color: $base-negro !important;
+        }
+
+        .accordion-item {
+
+            border: none !important;
+
+            button {
+                margin-bottom: 5px;
+                @include body2Bold();
+            }
+        }
+
+        .accordion-body {
+
+            a {
+                padding-bottom: 10px;
+                @include label3Thin();
+            }
+        }
+}

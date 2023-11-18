@@ -76,6 +76,13 @@ $type: 'Poppins';
     line-height: 24px;
     letter-spacing: 0;
 }
+@mixin body2Bold(){
+    font-family: $type;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+}
 @mixin label1(){
     font-family: $type;
     font-size: .8125em;

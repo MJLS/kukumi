@@ -4,9 +4,10 @@ $type: 'Poppins';
 
 
 
-@mixin typebase ( $size: 16px,$lineh: 0,$letters: 0 ) {
+@mixin typebase ( $size: 16px,$weight:100,$lineh: 0,$letters: 0 ) {
     font-family: $type;
     font-size: $size;
+    font-weight: $weight;
     line-height: $lineh;
     letter-spacing: $letters;
 }
@@ -68,6 +69,7 @@ $type: 'Poppins';
 }
 @mixin body1(){
     font-family: $type;
+    
 }
 @mixin body2(){
     font-family: $type;
@@ -98,11 +100,11 @@ $type: 'Poppins';
     letter-spacing: 0;
 }
 @mixin label3Thin() {
-    font-family: $type;
-    font-size: .75em;
-    font-weight: 200;
-    line-height: 12px;
-    letter-spacing: 0;
+    font-family: $type !important;
+    font-size: .75em !important;
+    font-weight: 200 !important;
+    line-height: 12px !important;
+    letter-spacing: 0 !important;
 }
 @mixin label3Bold(){
     font-family: $type;

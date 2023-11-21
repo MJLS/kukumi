@@ -7,6 +7,9 @@
     <title>kukumi head</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="asset/css/bootstrap-5.3.2-dist/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
     <!-- Flickity Slider -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
@@ -27,17 +30,10 @@
                     <span class="brand__title d-xl-block d-lg-block d-sm-none">kukumi</span>
                 </div>
 
-                <button 
-                    class="navbar-toggler align-items-end order-0" 
-                    data-bs-toggle="offcanvas" 
-                    data-bs-target="#navmenu" 
-                    aria-controls="navmenu" 
-                    type="button" 
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" 
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler align-items-end order-0" data-bs-toggle="offcanvas"
+                    data-bs-target="#navmenu" aria-controls="navmenu" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
 
                     <svg xmlns="http://www.w3.org/2000/svg" height="2rem" fill="none" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor">
@@ -67,13 +63,13 @@
                 </div>
 
                 <div id="usermenu " class="row order-lg-1 order-2">
-                    <svg class="col-6" xmlns="http://www.w3.org/2000/svg" fill="none" height="24"
-                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <svg class="col-6" xmlns="http://www.w3.org/2000/svg" fill="none" height="24" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
                     </svg>
-                    <a class="col-6" href="#" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    <a class="col-6" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                        aria-controls="offcanvasWithBothOptions">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="24" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -93,10 +89,7 @@
     </header>
 
     <!-- offcanvas menu -->
-    <div class="offcanvas offcanvas-start" 
-         data-bs-scroll="true" 
-         tabindex="-1" 
-         id="navmenu"
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="navmenu"
         aria-labelledby="offcanvasWithBothOptionsLabel">
 
         <div class="offcanvas-header">
@@ -133,245 +126,134 @@
         </div>
     </div>
 
-    <!-- hero slider -->
-    <section id="slider" class="main-carousel is-initial-select container-fluid p-0"
-        data-flickity='{ "cellAlign": "left", "contain": true }'>
-        <div class="carousel-cell--main">
-            <img src="asset/img/main.jpeg" alt="">
-            <div>
-                <h1>LEMA O TÍTULO EN MAYUSCULAS</h1>
-                <span class="info__txt">Texto es menor que antes ten en cuenta eso.</span>
-                <a href="#" class="info__cta"> CTA como una casa </a>
+    <!-- modal -->
+    <div class="modal fade" id="sizesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content border-0 rounded-0">
+                <div class="modal-header border-bottom-0">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Titulo o no</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Contenido
+                </div>
+
             </div>
+        </div>
+    </div>
+    <!-- product checkout -->
+    <main  class="container-xl px-3 ">
 
-        </div>
-        <div class="carousel-cell">
-            <img src="asset/img/_7f2ebf3a-10b9-43b7-aa43-5357f258bac1.jpeg" alt="">
+        <div id="checkout">
+            <!-- product single -->
+            <section id="product__single">
+                <div class="product__single__item row justify-content-center">
 
-        </div>
-        <div class="carousel-cell">
-            <img src="asset/img/_d5253057-8aeb-42ce-b796-11e9163d4e6d.jpeg" alt="">
-        </div>
-        <div class="carousel-cell">
-            <img src="asset/img/giancarlo-corti-GiQ9Yck2h3E-unsplash.jpeg" alt="">
-        </div>
-        <div class="carousel-cell">
-            <img src="https://images.unsplash.com/photo-1699190375905-3cac33bbdbb1?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="">
-        </div>
-        <div class="carousel-cell">
-            <img src="https://images.unsplash.com/photo-1699459867086-9d9d4031c0e3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="">
-        </div>
-    </section>
+                    <div class="item__img col-sm col-xl-6 row justify-content-center">
+                        <img src="asset/img/camiseta.png" class="img-fluid" alt="" class="product__img" />
+                        <div class="item__gallery">
+                            <div class="gallery">1</div>
+                            <div class="gallery">2</div>
+                            <div class="gallery">3</div>
+                        </div>
+                    </div>
+                    <div class="item__info col-xl-6 col-lg-6 row">
 
-    <!-- main -->
-    <main class="container-xl">
+                        <h2>Titulo del producto</h2>
 
-        <div id="title__section">
-            <h3>Titulo de sección</h3>
-        </div>
+                        <div class="info__infosize">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-rulers" viewBox="0 0 16 16">
+                                <path
+                                    d="M1 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h5v-1H2v-1h4v-1H4v-1h2v-1H2v-1h4V9H4V8h2V7H2V6h4V2h1v4h1V4h1v2h1V2h1v4h1V4h1v2h1V2h1v4h1V1a1 1 0 0 0-1-1H1z" />
+                            </svg>
+                            <!-- modal -->
+                            <button type="button" class="btn border-0" data-bs-toggle="modal"
+                                data-bs-target="#sizesModal">Guia de
+                                tallas</button>
 
-        <!-- shop -->
-        <section id="shop">
+                        </div>
 
-            <div
-                class="products row justify-content-xl-between justify-content-lg-center justify-content-md-center justify-content-sm-center">
-                <div class="product m-1 col-3">
-                    <img src="asset/img/_45480367-6d6f-4c4a-8197-28ed31939aa0.jpeg" alt="">
-                    <div class="item__head">
-                        <h3>Título del producto</h3>
-                        <div class="size">
+                        <div class="info__sizes">
                             <ul>
                                 <li>M</li>
                                 <li>L</li>
                                 <li>XL</li>
                             </ul>
                         </div>
-                    </div>
 
-                    <div class="price">
                         <span>40,00€</span>
-                    </div>
 
-                </div>
-                <div class="product m-1 col-3">
-                    <img src="asset/img/_7f2ebf3a-10b9-43b7-aa43-5357f258bac1.jpeg" alt="">
-                    <div class="item__head">
-                        <h3>Título del producto</h3>
-                        <div class="size">
-                            <ul>
-                                <li>M</li>
-                                <li>L</li>
-                                <li>XL</li>
-                            </ul>
-                        </div>
-                    </div>
+                        <a href="#" class="info__cta">Agregar a la cesta</a>
 
-                    <div class="price">
-                        <span>40,00€</span>
-                    </div>
-
-                </div>
-                <div class="product m-1 col-3">
-                    <img src="asset/img/_d5253057-8aeb-42ce-b796-11e9163d4e6d.jpeg" alt="">
-                    <div class="item__head">
-                        <h3>Título del producto</h3>
-                        <div class="size">
-                            <ul>
-                                <li>M</li>
-                                <li>L</li>
-                                <li>XL</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="price">
-                        <span>40,00€</span>
-                    </div>
-
-                </div>
-                <div class="product m-1 col-3">
-                    <img src="asset/img/_df92e80a-c226-45f1-9b62-7046e52ce738.jpeg" alt="">
-                    <div class="item__head">
-                        <h3>Título del producto</h3>
-                        <div class="size">
-                            <ul>
-                                <li>M</li>
-                                <li>L</li>
-                                <li>XL</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="price">
-                        <span>40,00€</span>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- trending -->
-        <section id="trending" class="row">
-
-            <div class="col-12 col-md-6 p-0 trending__img">
-                <img src="asset/img/trending.jpeg" alt="" class="trending__img" />
-            </div>
-            <div class="col-12 col-md-6 trending__info">
-                <h2>trending now</h2>
-                <a href="#">Mejor selección de la tienda</a>
-            </div>
-
-
-        </section>
-
-        <div id="title__section">
-            <h3>Titulo de sección</h3>
-        </div>
-
-        <!-- desing -->
-        <section id="design" class="row">
-
-            <div class="col-12 col-md-6 p-0 design__slider">
-                <img src="asset/img/desing.png" alt="">
-            </div>
-
-            <div class="col-12 col-md-6 p-0 ps-md-5 design__products">
-                <div class="row product__card pe-lg-5 pe-md-5">
-                    <div class="col-8  card__img p-0">
-                        <img src="asset/img/camiseta.png" alt="">
-                    </div>
-                    <div class="col-4 card__info p-0 ">
-                        <div class="info">
-                            <h3>Título del producto</h3>
-                            <div class="info__sizes">
-                                <ul>
-                                    <li>M</li>
-                                    <li>L</li>
-                                    <li>XL</li>
-                                </ul>
+                        <div class="accordion accordion-flush accordion__item mt-4" id="info__accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed ps-0" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#info__accordionOne" aria-expanded="false"
+                                        aria-controls="info__accordionOne">
+                                        Detalles
+                                    </button>
+                                </h2>
+                                <div id="info__accordionOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#info__accordion">
+                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                        demonstrate the <code>.accordion-flush</code> class. This is the first item's
+                                        accordion body.</div>
+                                </div>
                             </div>
-                            <span class="info__prices">40,00€</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row product__card pe-lg-5 pe-md-5">
-                    <div class="col-8  card__img p-0">
-                        <img src="asset/img/camiseta.png" alt="">
-                    </div>
-                    <div class="col-4 card__info p-0 ">
-                        <div class="info">
-                            <h3>Título del producto</h3>
-                            <div class="info__sizes">
-                                <ul>
-                                    <li>M</li>
-                                    <li>L</li>
-                                    <li>XL</li>
-                                </ul>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed ps-0" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#info__accordionTwo" aria-expanded="false"
+                                        aria-controls="info__accordionTwo">
+                                        Envio
+                                    </button>
+                                </h2>
+                                <div id="info__accordionTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#info__accordion">
+                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                        demonstrate the <code>.accordion-flush</code> class. This is the first item's
+                                        accordion body.</div>
+                                </div>
                             </div>
-                            <span class="info__prices">40,00€</span>
+
                         </div>
                     </div>
                 </div>
-                <div class="row product__card pe-lg-5 pe-md-5">
-                    <div class="col-8  card__img p-0">
-                        <img src="asset/img/camiseta.png" alt="">
-                    </div>
-                    <div class="col-4 card__info p-0 ">
-                        <div class="info">
-                            <h3>Título del producto</h3>
-                            <div class="info__sizes">
-                                <ul>
-                                    <li>M</li>
-                                    <li>L</li>
-                                    <li>XL</li>
-                                </ul>
-                            </div>
-                            <span class="info__prices">40,00€</span>
-                        </div>
-                    </div>
-                </div>
+
+            </section>
+
+            <div id="title__section">
+                <h3>Titulo de sección</h3>
             </div>
 
-        </section>
+            <!-- product info -->
+            <section id="product__info" class="row">
+                <div class="col-6 row">
+                    <div class="col-2 text-center">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <div class="col-10">
+                        <span>Lorem ipsum dolor sit</span>
+                    </div>
+                </div>
+                <div class="col-6 row">
+                    <div class="col-2 text-center">
+                        <i class="bi bi-check-circle"></i>
+                    </div>
+                    <div class="col-10">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, a! Laboriosam consequatur harum
+                            rem atque.</span>
+                    </div>
+                </div>
+            </section>
 
-        <div id="title__section">
-            <h3>Titulo de sección</h3>
         </div>
-
-        <!-- stories -->
-        <section id="stories">
-
-            <div class="story__card">
-                <img src="asset/img/s2.jpeg" alt="">
-                <h3>Titulo de la story</h3>
-                <p>Leer más...</p>
-            </div>
-            <div class="story__card">
-                <img src="asset/img/s1.jpeg" alt="">
-                <h3>Titulo de la story</h3>
-                <p>Leer más...</p>
-            </div>
-            <div class="story__card">
-                <img src="asset/img/s3.jpeg" alt="">
-                <h3>Titulo de la story</h3>
-                <p>Leer más...</p>
-            </div>
-            <div class="story__card">
-                <img src="asset/img/s4.jpeg" alt="">
-                <h3>Titulo de la story</h3>
-                <p>Leer más...</p>
-            </div>
-            <div class="story__card">
-                <img src="asset/img/s5.jpeg" alt="">
-                <h3>Titulo de la story</h3>
-                <p>Leer más...</p>
-            </div>
-
-        </section>
-
+        
     </main>
+
     <!-- footer -->
     <footer id="footer" class="container-xl my-5">
         <div class="footer__mv w-100 d-xl-none d-lg-none d-md-none d-sm-block ">
@@ -391,7 +273,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="accordion-item">
                     <h3 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -407,11 +289,12 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="accordion-item">
                     <h3 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
                             Kukumi
                         </button>
                     </h3>
@@ -421,11 +304,12 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="accordion-item">
                     <h3 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
                             Social
                         </button>
                     </h3>
@@ -436,7 +320,7 @@
                         </div>
                     </div>
                 </div>
-    
+
             </div>
         </div>
         <div class="footer__xl row w-100 justify-content-between d-none d-xl-flex d-lg-flex d-md-flex">
@@ -462,7 +346,6 @@
             </div>
         </div>
     </footer>
-
 
     <!-- bootstrap js -->
     <script src="asset/css/bootstrap-5.3.2-dist/bootstrap.min.js"></script>

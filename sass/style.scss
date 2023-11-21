@@ -601,48 +601,78 @@ D - Custom bootstrap
 
 /* 3. Checkout */
 
-
-
 #checkout {
-
-    background: linear-gradient(to top,  $base-blanco 0, $neutral-200 79%);
 
     /* 3.1 - Section product */
 
     #product__single {
 
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(189, 189, 189, 0.7077205882352942) 100%);
         margin: 50px 0;
-    
+
         .product__single__item {
-    
+
             justify-content: space-between;
-    
+
             .item__img {
+                
+                @media (max-width:576px){
+                    height: auto;
+                }
                 img {
                     width: 100%;
                     object-fit: cover;
                     object-position: center center;
                 }
-    
+
                 .item__gallery {
+                    height: auto;
+                    width: auto;
                     display: flex;
+                    
                     justify-content: center;
+                    border-radius: 18px;
+                    box-shadow: -1px 2px 21px -3px rgba(0,0,0,0.25);
+                    padding: 10px;
                     //NOTE: Orientativo. Ver implementación definitiva en WP
                     .gallery {
+                        
+                        border: 5px solid $base-blanco;
+                        outline-offset: 5px;
+
                         width: 100px;
                         height: 100px;
                         margin: 0 10px;
                         background: $neutral-300;
+                        
+                        @media (max-width:576px) {
+                            width: 50px;
+                            height: 50px; 
+                        }
                     }
                 }
             }
-    
+
             .item__info {
-    
-                h2 {
-                    @include h1();
+
+                @media (max-width:992px){
+                    
+                    margin-top: 20px;
+                    
+                    * {
+                        margin:10px 0;
+                    }
                 }
-    
+                @media (max-width:320px){
+                    text-align: center;
+                }
+
+                h2 {
+                    margin-top: 20px;
+                    @include h1();
+
+                }
+
                 .info__infosize {
                     button {
                         margin-left: 10px;
@@ -652,22 +682,26 @@ D - Custom bootstrap
                         text-underline-offset: 5px;
                         //NOTE: Propiedad que establece la separación del surrayado con la palabra.
                         text-decoration-thickness: .9px;
-                        @include h3Thin;  
+                        @include h3Thin;
                     }
-                    
-    
+
+
                 }
-    
+
                 .info__sizes {
-    
+
                     align-self: center;
-    
+                    @media (max-width:320px) {
+                        justify-content: center;
+                    }
+
                     ul {
+
                         display: flex;
                         padding: 0;
                         list-style: none;
                         margin: 10px 0;
-    
+
                         li {
                             display: flex;
                             justify-content: center;
@@ -680,17 +714,31 @@ D - Custom bootstrap
                             @include h2();
                             border: 1px solid $base-negro;
                             border-radius: 50%;
+                            @media (max-width:992px){
+                                width: 52px;
+                                height: 52px;
+                                @include h3();
+                            }
+
                         }
                     }
                 }
-    
+
                 // price
                 span {
                     @include display3();
                 }
-    
+                span::after{
+                    color:$neutral-600;
+                    text-decoration: line-through;
+                    text-decoration-thickness: 1px;
+                    content: "60,00€";
+                    @include typebase(.5em);
+                    margin-left: 10px;
+                }
+
                 .info__cta {
-    
+
                     width: 320px;
                     display: flex;
                     justify-content: center;
@@ -701,45 +749,53 @@ D - Custom bootstrap
                     text-transform: uppercase;
                     text-align: center;
                     @include body1();
-    
+
+                    @media (max-width:992px){
+                        padding: 10px 5px;
+                    }
+                    @media (max-width:768px){
+                        margin: 20px auto;
+                    }
+
                 }
-    
+
             }
-    
+
             #info__accordion {
-                
+
                 * {
                     margin: 0;
                 }
-               
-               .accordion-item {
-                background:transparent;
-               } 
 
-               .accordion-button{
-                    background-color:transparent;
-                    box-shadow: none;
-                    @include typebase (.68em,100);
-    
+                .accordion-item {
+                    background: transparent;
                 }
-    
+
+                .accordion-button {
+                    background-color: transparent;
+                    box-shadow: none;
+                    @include typebase (.68em, 100);
+
+                }
+
                 .accordion-body {
                     @include body2();
                 }
-    
+
             }
-    
-    
-    
+
+
+
         }
     }
-    
+
     /* 3.2 - Section product info */
-    
+
     #product__info {
         i {
             font-size: 1em;
         }
+
         span {
             @include label3Thin();
         }
